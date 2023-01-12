@@ -20,7 +20,7 @@ public class Reverse_Integer {
             return 0;
         return (int)val;
     }
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int k = 123;
         int output = reverse(k);
         System.out.println(output);

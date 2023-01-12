@@ -1,6 +1,8 @@
-class Solution {
+import java.util.HashMap;
+
+public class First_Letter_To_Appera_Twice {
     public char repeatedCharacter(String s) {
-        
+
         HashMap<Character,Integer> hm = new HashMap<>();
         char sol = 'a';
 
@@ -15,3 +17,4 @@ class Solution {
         return sol;
     }
 }
+
