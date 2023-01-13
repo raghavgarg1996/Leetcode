@@ -16,7 +16,6 @@ public class Covert_The_Temperature {
         double cels = 36.50;
         double[] temp_array = new double[2];
         temp_array = convertTemperature(cels);
-
         for (double v : temp_array) {
             System.out.println(v);
         }
