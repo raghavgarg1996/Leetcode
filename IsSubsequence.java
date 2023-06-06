@@ -29,8 +29,8 @@ public class IsSubsequence {
 
     public static void main(String[] args) {
 
-        String s = "b";
-        String t = "abc";
+        String s = "abc";
+        String t = "sdfabcrt";
         boolean k = isSubsequence(s,t);
         System.out.println(k);
     }
