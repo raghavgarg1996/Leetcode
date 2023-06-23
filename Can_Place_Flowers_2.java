@@ -1,4 +1,5 @@
-class Can_Place_Flowers2 {
+public class Can_Place_Flowers_2 {
+
     public static boolean canPlaceFlowers(int[] flowerbed, int n) {
         if (flowerbed == null || flowerbed.length == 0) {
             return false;
