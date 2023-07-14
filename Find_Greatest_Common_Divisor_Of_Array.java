@@ -18,7 +18,6 @@ public class Find_Greatest_Common_Divisor_Of_Array {
             }
         }
 
-
         for (int i=1; i<=minValue|| i<=maxValue; i++) {
             if ((minValue % i ==0) && (maxValue % i ==0)) {
                 hcf = i;
