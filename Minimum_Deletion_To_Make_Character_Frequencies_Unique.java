@@ -1,56 +1,37 @@
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
-public class GoodStringDeletions {
+public class Minimum_Deletion_To_Make_Character_Frequencies_Unique {
 
-    public static int minDeletionsToMakeGoodString(String s) {
-        // Create a HashMap to store the frequency of each character
-        Map<Character, Integer> freqMap = new HashMap<>();
+    public static int minDeletions(String s) {
 
-        // Create a Set to keep track of unique frequencies
-        Set<Integer> uniqueFreqs = new HashSet<>();
+        HashMap<Character, Integer> hm = new HashMap<>();
+        HashSet<Integer> hs = new HashSet<>();
+        int deletionNeeded = 0;
 
-        // Initialize the count of deletions needed
-        int deletionsNeeded = 0;
-
-        // Iterate through the characters of the string using a traditional for loop
         for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-
-            // Update the frequency map
-            if (freqMap.containsKey(c)) {
-                freqMap.put(c, freqMap.get(c) + 1);
+            if (hm.containsKey(s.charAt(i))) {
+                int k = hm.get(s.charAt(i));
+                hm.put(s.charAt(i), ++k);
             } else {
-                freqMap.put(c, 1);
+                hm.put(s.charAt(i), 1);
             }
 
-            int freq = freqMap.get(c);
+            int freq = hm.get(s.charAt(i));
 
-            // Check if the current frequency is already in the set
-            while (uniqueFreqs.contains(freq)) {
-                // If it is, decrement the frequency by 1 (delete a character)
+            while (hs.contains(freq)) {
                 freq--;
-                deletionsNeeded++;
+                deletionNeeded++;
             }
-
-            // Add the current frequency to the set of unique frequencies
-            uniqueFreqs.add(freq);
+            hs.add(freq);
         }
 
-        return deletionsNeeded;
+        return deletionNeeded;
+
     }
 
     public static void main(String[] args) {
-        // Test cases
-        System.out.println(minDeletionsToMakeGoodString("aab"));       // Output: 0
-        System.out.println(minDeletionsToMakeGoodString("aaabbbcc"));  // Output: 2
-        System.out.println(minDeletionsToMakeGoodString("ceabaacb"));  // Output: 2
+
+        String s = "aab";
+        System.out.println(minDeletions(s));
     }
 }
-
-
-
-
-
