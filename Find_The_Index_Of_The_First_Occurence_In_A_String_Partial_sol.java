@@ -1,4 +1,4 @@
-public class Find_The_Index_Of_The_First_Occurence_In_A_String {
+public class Find_The_Index_Of_The_First_Occurence_In_A_String_Partial_sol {
 
     // Partial solution - successfully completeled 29 cases, below case failed
     public static int strStr(String haystack, String needle) {
