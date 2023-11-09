@@ -1,9 +1,6 @@
-package Count_The_No;
-
 import java.util.HashMap;
-import java.util.Map;
 
-public class _Of_Consistent_Strings {
+public class Count_The_No_Of_Strings {
 
     public static int countConsistentStrings(String allowed, String[] words) {
 
