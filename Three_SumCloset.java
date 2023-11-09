@@ -6,56 +6,35 @@ import java.util.Map;
 public class Three_SumCloset {
 
     public static int threeSumClosest(int[] nums, int target) {
-
-        HashMap<Integer, ArrayList> hm = new HashMap<>();
-        ArrayList<Integer> ls;
         Arrays.sort(nums);
 
-        for (int i = 0; i <= nums.length - 3; i++) {
-            int j = i + 1;
-            int k = nums.length - 1;
+        int closestSum = nums[0] + nums[1] + nums[2];
 
-            while (j <= k) {
-                ls = new ArrayList<>();
-                int current_Sum = nums[i];
-                current_Sum = current_Sum + nums[j];
-                current_Sum = current_Sum + nums[k];
-                ls.add(nums[i]);
-                ls.add(nums[j]);
-                ls.add(nums[k]);
-                hm.put(current_Sum, ls);
+        for (int i = 0; i < nums.length - 2; i++) {
+            int left = i + 1;
+            int right = nums.length - 1;
 
-                if (current_Sum == target) {
-                    j++;
-                    k--;
-                } else if (current_Sum > target) {
-                    k--;
+            while (left < right) {
+                int currentSum = nums[i] + nums[left] + nums[right];
+
+                if (Math.abs(currentSum - target) < Math.abs(closestSum - target)) {
+                    closestSum = currentSum;
+                }
+
+                if (currentSum < target) {
+                    left++;
                 } else {
-                    j++;
+                    right--;
                 }
             }
         }
 
-        System.out.println(hm);
-
-        int minVal = nums[nums.length - 1];
-        int keyVal = nums[0];
-        for (Map.Entry entry : hm.entrySet()) {
-            int key = (int) entry.getKey();
-            int closeVal = target - key;
-            if ((minVal >= closeVal) && (key > keyVal)) {
-                minVal = closeVal;
-                keyVal = key;
-            }
-        }
-
-        return keyVal;
+        return closestSum;
     }
 
     public static void main(String[] args) {
-
-        int[] nums = {1,1,-1};
-        int target = 2;
+        int[] nums = {1, 1, 1, 1};
+        int target = 100;
         System.out.println(threeSumClosest(nums, target));
     }
 }
