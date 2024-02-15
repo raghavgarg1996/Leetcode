@@ -17,15 +17,11 @@ public class MainClass {
 
         String dir1Path = "out/test/Leetcode";
 
-        //   String dir2Path = "path/to/dir2";
-
         // Load classes from dir1
 
         loadAndRunClasses(dir1Path);
 
         // Load classes from dir2
-
-        //    loadAndRunClasses(dir2Path);
 
     }
 
@@ -59,6 +55,7 @@ public class MainClass {
             // Check if the loaded class is not the MainClass itself
 
             if (!loadedClass.equals(MainClass.class)) {
+
                 // Get the main method
                 Method mainMethod = loadedClass.getMethod("main", String[].class);
 
