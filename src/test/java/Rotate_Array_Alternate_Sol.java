@@ -18,4 +18,8 @@ public class Rotate_Array_Alternate_Sol {
         }
         System.arraycopy( result, 0, nums, 0, nums.length );
     }
+
+    public static void main(String[] args) {
+
+    }
 }

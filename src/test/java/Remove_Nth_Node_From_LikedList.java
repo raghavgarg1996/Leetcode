@@ -31,4 +31,8 @@ public class Remove_Nth_Node_From_LikedList {
         prevNode.next = prevNode.next.next;
         return head;
     }*/
+
+    public static void main(String[] args) {
+
+    }
 }

@@ -49,4 +49,8 @@ public class Pallindrome_Linked_List {
         }
         return true;
     }*/
+
+    public static void main(String[] args) {
+
+    }
 }

@@ -39,4 +39,8 @@ public class Ransom_Note {
             return false;
         }
     }
+
+    public static void main(String[] args) {
+
+    }
 }

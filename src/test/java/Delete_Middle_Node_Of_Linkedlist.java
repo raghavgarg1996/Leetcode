@@ -28,4 +28,8 @@ public class Delete_Middle_Node_Of_Linkedlist {
         deleteNode.next = deleteNode.next.next;
         return head;
     }*/
+
+    public static void main(String[] args) {
+
+    }
 }

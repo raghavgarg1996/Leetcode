@@ -19,4 +19,7 @@ public class Linked_List_Cycle {
         }
         return false;
     }*/
+    public static void main(String[] args) {
+
+    }
 }
