@@ -15,6 +15,7 @@ public class MainClass {
 
         // Specify the directories containing the compiled classes
 
+ //     String dir1Path = System.getProperty("user.dir") + "/out/test/Leetcode";
         String dir1Path = "out/test/Leetcode";
 
         // Load classes from dir1
